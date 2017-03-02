@@ -76,7 +76,7 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->redirect('http://integration.zdorov.pro/kz/backend/web/index.php?r=order%2Findex');
         } else {
             return $this->render('login', [
                 'model' => $model,
